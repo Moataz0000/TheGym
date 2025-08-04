@@ -1,0 +1,176 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-08-02 12:58+0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
+"&& n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
+
+#: config/settings.py:118
+msgid "Arabic"
+msgstr "العربية"
+
+#: config/settings.py:119
+msgid "English"
+msgstr "الإنجليزية"
+
+#: members/constraints.py:7 members/custom_admin/display.py:13
+msgid "Active"
+msgstr "نشط"
+
+#: members/constraints.py:8 members/custom_admin/display.py:19
+msgid "Expired"
+msgstr "منتهي الصلاحية"
+
+#: members/constraints.py:13
+msgid "1 Month"
+msgstr "شهر واحد"
+
+#: members/constraints.py:14
+msgid "2 Months"
+msgstr "شهرين"
+
+#: members/constraints.py:15
+msgid "3 Months"
+msgstr "3 أشهر"
+
+#: members/constraints.py:16
+msgid "4 Months"
+msgstr "4 أشهر"
+
+#: members/constraints.py:17
+msgid "5 Months"
+msgstr "5 أشهر"
+
+#: members/constraints.py:18
+msgid "6 Months"
+msgstr "6 أشهر"
+
+#: members/constraints.py:19
+msgid "7 Months"
+msgstr "7 أشهر"
+
+#: members/constraints.py:20
+msgid "8 Months"
+msgstr "8 أشهر"
+
+#: members/constraints.py:21
+msgid "9 Months"
+msgstr "9 أشهر"
+
+#: members/constraints.py:22
+msgid "10 Months"
+msgstr "10 أشهر"
+
+#: members/constraints.py:23
+msgid "11 Months"
+msgstr "11 شهر"
+
+#: members/constraints.py:24
+msgid "12 Months"
+msgstr "12 شهر"
+
+#: members/custom_admin/display.py:24 members/models.py:51
+msgid "Status"
+msgstr "الحالة"
+
+#: members/custom_admin/field_sets.py:9 members/custom_admin/field_sets.py:33
+msgid "Personal Info"
+msgstr "المعلومات الشخصية"
+
+#: members/custom_admin/field_sets.py:16 members/custom_admin/field_sets.py:40
+msgid "Subscription Details"
+msgstr "تفاصيل الاشتراك"
+
+#: members/custom_admin/field_sets.py:25 members/custom_admin/field_sets.py:47
+msgid "Facilities"
+msgstr "الخدمات"
+
+#: members/models.py:13
+msgid "Full Name"
+msgstr "الاسم الكامل"
+
+#: members/models.py:15
+msgid "Age"
+msgstr "العمر"
+
+#: members/models.py:20
+msgid "Enter a valid Egyptian phone number."
+msgstr "أدخل رقم هاتف مصري صحيح."
+
+#: members/models.py:21
+msgid "Phone Number"
+msgstr "رقم الهاتف"
+
+#: members/models.py:27
+msgid "Subscription Plan"
+msgstr "خطة الاشتراك"
+
+#: members/models.py:33
+msgid "Price"
+msgstr "السعر"
+
+#: members/models.py:36
+msgid "Has Tread Male"
+msgstr "يشمل جهاز المشي"
+
+#: members/models.py:41
+msgid "Start Date"
+msgstr "تاريخ البداية"
+
+#: members/models.py:46
+msgid "Expiration Date"
+msgstr "تاريخ الانتهاء"
+
+#: members/models.py:71
+msgid "Member"
+msgstr "العملاء"
+
+#: members/models.py:72
+msgid "Members"
+msgstr "العملاء"
+
+#: templates/admin/base_site.html:9
+msgid "Change Language"
+msgstr "اختار اللغه"
+
+#: templates/admin/index.html:14
+msgid "Users"
+msgstr "اجمالي العملاء"
+
+#: templates/admin/index.html:18
+msgid "users"
+msgstr "عملاء"
+
+#: templates/admin/index.html:24
+msgid "Revenue"
+msgstr "اجمالي الارباح"
+
+#: templates/admin/index.html:28
+msgid "EG"
+msgstr "جنيه"
+
+#: templates/admin/index.html:34
+msgid "Admins"
+msgstr "إجمالي المشرفين"
+
+#: templates/admin/index.html:38
+msgid "admins"
+msgstr "المشرفين"
+
+#: templates/admin/index.html:56
+msgid "Add A New Member"
+msgstr "اضافه عميل جديد"

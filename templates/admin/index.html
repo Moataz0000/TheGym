@@ -1,0 +1,159 @@
+{% extends "admin/base_site.html" %}
+{% load static i18n %}
+
+
+
+{% block title %}{% endblock %}
+{% block content %}
+
+<!-- 🌟 Custom Admin Insights -->
+<div class="dashboard-insights">
+  <div class="insight-card">
+    <h3>
+      <span style="font-size:22px; vertical-align:middle; margin-right:8px;">👤</span>
+      {% trans "Users" %}
+    </h3>
+    <p>
+      <span style="font-size:28px; color:#00ffff; font-weight:bold;">{{ total_members }}</span>
+      <span style="font-size:14px; color:#aaa; margin-left:6px;">{% trans "users" %}</span>
+    </p>
+  </div>
+  <div class="insight-card">
+    <h3>
+      <span style="font-size:22px; vertical-align:middle; margin-right:8px;">💰</span>
+      {% trans "Revenue" %}
+    </h3>
+    <p>
+      <span style="font-size:28px; color:#ffd700; font-weight:bold;">{{ total_revenue }}</span>
+      <span style="font-size:14px; color:#aaa; margin-left:6px;">{% trans "EG" %}</span>
+    </p>
+  </div>
+  <div class="insight-card">
+    <h3>
+      <span style="font-size:22px; vertical-align:middle; margin-right:8px;">🛡️</span>
+      {% trans "Admins" %}
+    </h3>
+    <p>
+      <span style="font-size:28px; color:#ff4081; font-weight:bold;">{{ total_admins }}</span>
+      <span style="font-size:14px; color:#aaa; margin-left:6px;">{% trans "admins" %}</span>
+    </p>
+  </div>
+</div>
+
+<br><br>
+<br>
+<br>
+<br>
+<br>
+
+{{ block.super }}
+
+<!-- Centered Animated Add Member Button -->
+<div style="display: flex; justify-content: center; margin-bottom: 30px;">
+  <a href="http://127.0.0.1:8000/ar/admin/members/member/" class="add-member-btn-animated">
+    <span class="plus-icon">+</span>
+    <span style="color: #ff0;">{% trans "Add A New Member" %}</span>
+  </a>
+</div>
+<style>
+.add-member-btn-animated {
+  background: #000;
+  color: #ff0;
+  padding: 16px 40px;
+  border-radius: 10px;
+  font-size: 20px;
+  font-weight: 700;
+  text-decoration: none;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.8), 0 0 20px rgba(255, 255, 255, 0.2);
+  transition: transform 0.2s, box-shadow 0.2s, background 0.4s;
+  position: relative;
+  overflow: hidden;
+  letter-spacing: 0.5px;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  border: none;
+}
+
+.plus-icon {
+  font-size: 22px;
+  color: #ff0; /* Changed to yellow */
+  margin-right: 4px;
+  vertical-align: middle;
+  font-weight: bold;
+  transition: transform 0.3s;
+}
+
+.add-member-btn-animated:hover .plus-icon {
+  transform: scale(1.2) rotate(20deg);
+}
+
+.add-member-btn-animated:hover {
+  background: #111;
+  transform: translateY(-2px) scale(1.04);
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.9), 0 0 30px rgba(255, 255, 255, 0.3);
+}
+
+.add-member-btn-animated:active {
+  background: #222;
+  transform: scale(0.98);
+}
+
+.add-member-btn-animated::after {
+  content: '';
+  position: absolute;
+  left: -50%;
+  top: 0;
+  width: 200%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.08);
+  transform: skewX(-20deg);
+  transition: left 0.4s;
+}
+
+.add-member-btn-animated:hover::after {
+  left: 100%;
+}
+</style>
+
+
+{{ block.super }}
+{% endblock %}
+
+{% block extrastyle %}
+{{ block.super }}
+<style>
+.dashboard-insights {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.insight-card {
+  flex: 1 1 200px;
+  background: #1e1e1e;
+  color: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0, 255, 255, 0.2);
+  transition: transform 0.3s;
+}
+
+.insight-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 0 15px rgba(0, 255, 255, 0.4);
+}
+
+.insight-card h3 {
+  margin: 0 0 10px;
+  font-size: 16px;
+  color: #00ffff;
+}
+
+.insight-card p {
+  font-size: 20px;
+  font-weight: bold;
+}
+</style>
+{% endblock %}

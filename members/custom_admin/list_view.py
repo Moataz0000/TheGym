@@ -3,6 +3,7 @@
 
 class MemeberListView:
     list_display = (
+        'member_image',
         'full_name',
         'age',
         'phone_number',
@@ -12,11 +13,6 @@ class MemeberListView:
         'start_from',
         'expiration_date',
         'status_badge',
-    )
-    list_filter = (
-        'status',
-        'has_treadmale',
-
     )
     search_fields = (
         'full_name',

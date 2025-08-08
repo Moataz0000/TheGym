@@ -23,3 +23,13 @@ class MemeberDisplay:
     
     status_badge.short_description = _('Status')
     status_badge.admin_order_field = 'status'
+
+    def member_image(self, obj):
+        """Display member image as a larger square thumbnail in list view"""
+        if obj.photo:
+            return format_html(
+                '<img src="{}" style="height:64px;width:64px;object-fit:cover;border-radius:8px;" alt="Member Image"/>',
+                obj.photo.url
+            )
+        return "-"
+    member_image.short_description = _('Image')

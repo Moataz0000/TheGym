@@ -9,6 +9,7 @@ class MemberFieldSets:
                 (_('Personal Info'), {
                     'fields': (
                         'full_name',
+                        'photo',
                         'age',
                         'phone_number',
                     )
@@ -25,6 +26,8 @@ class MemberFieldSets:
                 (_('Facilities'), {
                     'fields': (
                         'has_treadmale',
+                                                'notes'
+
                     )
                 }),
             )
@@ -32,9 +35,11 @@ class MemberFieldSets:
             return (
                 (_('Personal Info'), {
                     'fields': (
+                        'photo',
                         'full_name',
                         'age',
                         'phone_number',
+                        
                     )
                 }),
                 (_('Subscription Details'), {
@@ -47,6 +52,7 @@ class MemberFieldSets:
                 (_('Facilities'), {
                     'fields': (
                         'has_treadmale',
+                        'notes'
                     )
                 }),
             )

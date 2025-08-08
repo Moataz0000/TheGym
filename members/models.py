@@ -12,6 +12,7 @@ class Member(models.Model):
         unique=True,
         verbose_name=_("Full Name")
     )
+    photo = models.ImageField(upload_to='photos/', verbose_name=_("Photo"), null=True, blank=True)
     age = models.PositiveIntegerField(verbose_name=_('Age'))
     phone_number = PhoneNumberField(
         country_code='EG',
@@ -29,7 +30,6 @@ class Member(models.Model):
     price = models.DecimalField(
         max_digits=10,
         decimal_places=2,
-        default=0.0,
         verbose_name=_("Price")
     )
     has_treadmale = models.BooleanField(
@@ -50,13 +50,13 @@ class Member(models.Model):
         choices=MemberStatus.choices,
         verbose_name=_("Status")
     )
+    notes = models.TextField(verbose_name=_('Notes'), blank=True, null=True, help_text=_("Add some notes for this member"))
 
     def save(self, *args, **kwargs):
         if not self.expiration_date:
             months = int(self.subscription_plan.replace('MONTH', ''))
             self.expiration_date = self.start_from + relativedelta(months=months)
         
-        # Update status based on current date
         today = timezone.localdate()
         self.status = MemberStatus.ACTIVE if today <= self.expiration_date else MemberStatus.EXPIRED
 
@@ -70,3 +70,34 @@ class Member(models.Model):
     class Meta:
         verbose_name = _("Member")
         verbose_name_plural = _("Members")
+
+
+
+
+
+class GymExpense(models.Model):
+    name = models.CharField(
+        max_length=255,
+        verbose_name=_("Expense Name")
+    )
+    description = models.TextField(
+        blank=True,
+        null=True,
+        verbose_name=_("Description")
+    )
+    amount = models.DecimalField(
+        max_digits=10,
+        decimal_places=2,
+        verbose_name=_("Amount")
+    )
+    date = models.DateField(
+        verbose_name=_("Date")
+    )
+
+    def __str__(self):
+        return self.name
+        
+
+    class Meta:
+        verbose_name = _("Gym Expense")
+        verbose_name_plural = _("Gym Expenses")

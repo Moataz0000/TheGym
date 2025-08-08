@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-08-02 12:58+0300\n"
+"POT-Creation-Date: 2025-08-08 14:16+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -87,15 +87,19 @@ msgstr "12 شهر"
 msgid "Status"
 msgstr "الحالة"
 
-#: members/custom_admin/field_sets.py:9 members/custom_admin/field_sets.py:33
+#: members/custom_admin/display.py:35
+msgid "Image"
+msgstr ""
+
+#: members/custom_admin/field_sets.py:9 members/custom_admin/field_sets.py:36
 msgid "Personal Info"
 msgstr "المعلومات الشخصية"
 
-#: members/custom_admin/field_sets.py:16 members/custom_admin/field_sets.py:40
+#: members/custom_admin/field_sets.py:17 members/custom_admin/field_sets.py:45
 msgid "Subscription Details"
 msgstr "تفاصيل الاشتراك"
 
-#: members/custom_admin/field_sets.py:25 members/custom_admin/field_sets.py:47
+#: members/custom_admin/field_sets.py:26 members/custom_admin/field_sets.py:52
 msgid "Facilities"
 msgstr "الخدمات"
 
@@ -104,18 +108,22 @@ msgid "Full Name"
 msgstr "الاسم الكامل"
 
 #: members/models.py:15
+msgid "Photo"
+msgstr ""
+
+#: members/models.py:16
 msgid "Age"
 msgstr "العمر"
 
-#: members/models.py:20
+#: members/models.py:21
 msgid "Enter a valid Egyptian phone number."
 msgstr "أدخل رقم هاتف مصري صحيح."
 
-#: members/models.py:21
+#: members/models.py:22
 msgid "Phone Number"
 msgstr "رقم الهاتف"
 
-#: members/models.py:27
+#: members/models.py:28
 msgid "Subscription Plan"
 msgstr "خطة الاشتراك"
 
@@ -135,6 +143,14 @@ msgstr "تاريخ البداية"
 msgid "Expiration Date"
 msgstr "تاريخ الانتهاء"
 
+#: members/models.py:53
+msgid "Notes"
+msgstr "ملاحظات"
+
+#: members/models.py:53
+msgid "Add some notes for this member"
+msgstr "ضيف بعض ملاحظات"
+
 #: members/models.py:71
 msgid "Member"
 msgstr "العملاء"
@@ -142,6 +158,30 @@ msgstr "العملاء"
 #: members/models.py:72
 msgid "Members"
 msgstr "العملاء"
+
+#: members/models.py:81
+msgid "Expense Name"
+msgstr " اسم المصروف"
+
+#: members/models.py:86
+msgid "Description"
+msgstr "ملاحظات"
+
+#: members/models.py:91
+msgid "Amount"
+msgstr "المبلغ"
+
+#: members/models.py:94
+msgid "Date"
+msgstr "التاريخ"
+
+#: members/models.py:102
+msgid "Gym Expense"
+msgstr " اسم المصروف"
+
+#: members/models.py:103
+msgid "Gym Expenses"
+msgstr "مصروفات الجيم"
 
 #: templates/admin/base_site.html:9
 msgid "Change Language"
@@ -156,21 +196,19 @@ msgid "users"
 msgstr "عملاء"
 
 #: templates/admin/index.html:24
-msgid "Revenue"
-msgstr "اجمالي الارباح"
-
-#: templates/admin/index.html:28
-msgid "EG"
-msgstr "جنيه"
-
-#: templates/admin/index.html:34
 msgid "Admins"
 msgstr "إجمالي المشرفين"
 
-#: templates/admin/index.html:38
+#: templates/admin/index.html:28
 msgid "admins"
 msgstr "المشرفين"
 
-#: templates/admin/index.html:56
+#: templates/admin/index.html:45
 msgid "Add A New Member"
 msgstr "اضافه عميل جديد"
+
+#~ msgid "Revenue"
+#~ msgstr "اجمالي الارباح"
+
+#~ msgid "EG"
+#~ msgstr "جنيه"

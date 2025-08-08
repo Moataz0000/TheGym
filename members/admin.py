@@ -8,6 +8,8 @@ from django.utils.translation import gettext_lazy as _
 from .custom_admin.field_sets import MemberFieldSets
 from .custom_admin.display import MemeberDisplay
 from .custom_admin.list_view import MemeberListView
+from .models import GymExpense
+
 
 admin.site.unregister(Group)
 admin.site.unregister(User)
@@ -18,3 +20,8 @@ admin.site.unregister(User)
 @admin.register(Member)
 class MemberAdmin(MemeberListView, MemberFieldSets, MemeberDisplay, admin.ModelAdmin):
     pass
+
+
+@admin.register(GymExpense)
+class GymExpenseAdmin(admin.ModelAdmin):
+    list_display = ['name', 'description', 'amount', 'date']
